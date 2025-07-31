@@ -16,7 +16,7 @@ class DatabaseConn
     $user = "danzo";
     $password = "root";
     $database = new Connection($dsn, $user, $password);
-    $storage = new FileStorage('/tmp');
+    $storage = new FileStorage(sys_get_temp_dir());
     $structure = new Structure($database, $storage);
     $conventions = new DiscoveredConventions($structure);
     $explorer = new Explorer($database, $structure, $conventions);
