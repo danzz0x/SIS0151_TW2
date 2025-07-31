@@ -99,6 +99,7 @@ class ProductoController extends Controller
       ]);
     }
     $data = ['producto' => new Producto(
+      null,
       $nombre,
       $cantidad,
       $precio,
